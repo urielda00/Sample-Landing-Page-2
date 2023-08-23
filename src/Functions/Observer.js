@@ -1,11 +1,10 @@
 // Cusutom function to check if section is in the viewport- and change the tabs correspondingly:
 import * as React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Is0,Is1,Is2,Is3 } from '../features/Tabs';
 
-export default function Observer({changeTabPerPage}){
+export default function Observer(){
   const dispatch = useDispatch();
-  const tabValue = useSelector((state) => state.tab.tabValue) 
     React.useEffect(()=>{
       window.addEventListener('scroll',()=>{
         if (window.scrollY>700 &&window.scrollY<1300){
@@ -18,5 +17,5 @@ export default function Observer({changeTabPerPage}){
           dispatch(Is0())
         }
       })
-    },[]);
+    },[dispatch]);
 };

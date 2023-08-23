@@ -3,6 +3,7 @@ import CardIs from './Card';
 import card1 from '../assets/card1.jpg';
 import card2 from '../assets/card2.jpg';
 import card3 from '../assets/card3.jpg';
+import { Box } from '@mui/material';
 
 const Services = () => {
   const cardRefs = useRef([]);
@@ -39,33 +40,51 @@ const Services = () => {
       observer.disconnect();
     };
   }, []);
+
+
   return (
-    <>
-   <div style={containerStyle} id='servicesPage' className="scroll-container">
-      <div className="cards">
-        <div ref={el => (cardRefs.current[0] = el)} className="card-wrapper">
-          <CardIs image={card1} title={'Fun Days'} text={'Some text go here'}/>
-        </div>
-        <div ref={el => (cardRefs.current[1] = el)} className="card-wrapper">
-          <CardIs image={card2} title={'Family Days'} text={'Some text go here'}/>
-        </div>
-        <div ref={el => (cardRefs.current[2] = el)} className="card-wrapper">
-          <CardIs image={card3} title={'Couples Days'} text={'Some text go here'}/>
-        </div>
-      </div>
-    </div>
-  
-  </>
+    <Box id='servicesPage'>
+      <Box style={containerStyle} sx={{display:{xs:'none',sm:'flex', md: 'flex'}}} 
+         className="scroll-container">
+        <Box sx={{display:{xs:'none',sm:'flex', md: 'flex'}}} className="cards">
+          <Box  ref={el => (cardRefs.current[0] = el)} className="card-wrapper">
+            <CardIs image={card1} title={'Fun Days'} text={'Some text go here'}/>
+          </Box>
+          <Box ref={el => (cardRefs.current[1] = el)} className="card-wrapper">
+            <CardIs image={card2} title={'Family Days'} text={'Some text go here'}/>
+          </Box>
+          <Box ref={el => (cardRefs.current[2] = el)} className="card-wrapper">
+            <CardIs image={card3} title={'Couples Days'} text={'Some text go here'}/>
+          </Box>
+        </Box>
+      </Box> 
+      <Box sx={containerSStyle}>   
+         <CardIs image={card1} title={'Fun Days'} text={'Some text go here'}/>           
+         <CardIs image={card2} title={'Family Days'} text={'Some text go here'}/>         
+         <CardIs image={card3} title={'Couples Days'} text={'Some text go here'}/>
+      </Box> 
+    </Box>
   )
 };
 
 export default Services;
 
 const containerStyle = {
+  display:{xs:'none',sm:'flex', md: 'flex'},
   width:'100%',
   height:'100vh',
-  display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor:'#FFE5E5'
+  backgroundColor:'#FFE5E5',
+  flexDirection:'column'
+};
+
+const containerSStyle = {
+  display:{xs:'flex',sm:'none', md: 'none'},
+  width:'100%',
+  height:'100vh',
+  alignItems: 'center',
+  backgroundColor:'#FFE5E5',
+  flexDirection:'column',
+  padding:'20px'
 };

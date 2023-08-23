@@ -1,19 +1,16 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import { Typography, Card, CardMedia, CardContent, CardActionArea } from "@mui/material";
 
- const CardIs = ({image,title,text})=> {
+const CardIs = ({image,title,text})=> {
   return (
-    <Card sx={{ maxWidth: 345, width:'300px', height:'300px', marginRight:'10px' }}>
+  <>
+    <Card sx={{ maxWidth: 345, width:'300px', height:'300px', marginRight:'10px',display:{xs:'none',sm:'block', md: 'block'} }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={image}
-          alt="green iguana"
+          image={'image'}
+          alt="image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -25,9 +22,30 @@ import { CardActionArea } from '@mui/material';
         </CardContent>
       </CardActionArea>
     </Card>
+
+{/* For mobile */}
+     <Card sx={{ width:'250px', height:'250px',marginBottom:'10px',display:{xs:'block',sm:'none', md: 'none'} }}>
+     <CardActionArea>
+       <CardMedia
+        component="img"
+         height="140"
+         image={image}
+         alt="image"
+        />
+       <CardContent>
+         <Typography gutterBottom variant="h5" component="div">
+           {title}
+         </Typography>
+         <Typography variant="body2" color="text.secondary">
+           {text}
+         </Typography>
+       </CardContent>
+     </CardActionArea>
+     </Card>
+    
+  </>
   );
 }
 export default CardIs;
 
 
-// classname=card

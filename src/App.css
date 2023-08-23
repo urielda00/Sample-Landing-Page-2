@@ -50,7 +50,7 @@ opacity: 1;
 
 .card-wrapper {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-10%);
   transition: opacity 2s, transform 1s;
 }
 

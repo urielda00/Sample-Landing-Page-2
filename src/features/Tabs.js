@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  tabValue: 'zero'
+  tabValue: 'zero',
 }
 
 export const TabSlice = createSlice({

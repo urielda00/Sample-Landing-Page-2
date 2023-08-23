@@ -16,7 +16,8 @@ export default function App() {
   return (
     <>
       <Header/>
-      <FirstView/>
+     
+      <FirstView/> 
       <About/>
       <Services/>
       <Contact/>

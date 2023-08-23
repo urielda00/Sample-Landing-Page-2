@@ -1,14 +1,9 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-
-
+import { Box,Typography,Container } from '@mui/material';
 
 
 const Footer = () =>{
   return (
-   
       <Box
         sx={{
           display: 'flex',
@@ -20,7 +15,7 @@ const Footer = () =>{
           sx={{
             py: 3,
             px: 2,
-            mt: 'auto',
+            mt: {xs:2,sm:0, md: 0},
             backgroundColor:'#B9B4C7',
           }}
         >
