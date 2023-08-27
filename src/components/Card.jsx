@@ -15,7 +15,7 @@ const CardIs = ({image,title,text})=> {
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}
-          </Typography>ד
+          </Typography>
           <Typography variant="body2" color="text.secondary">
             {text}
           </Typography>

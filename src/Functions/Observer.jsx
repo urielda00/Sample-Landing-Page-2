@@ -13,7 +13,7 @@ const SectionWrapper = ({ id, children }) => {
       rootMargin: '0px',
       threshold: 0.8, // Adjust this value as needed
     };
-
+     
     const callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -33,7 +33,7 @@ const SectionWrapper = ({ id, children }) => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, [id]);
+  }, [id,dispatch,sectionRef]);
 
   return <div ref={sectionRef}>{children}</div>;
 };

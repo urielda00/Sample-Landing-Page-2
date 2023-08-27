@@ -1,13 +1,10 @@
 import { Box,Tabs,Tab } from '@mui/material';
 import React from 'react';
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Drawer from './Drawer';
 
 const Header= () => {
   const tabValue = useSelector((state) => state.tab.tabValue); 
-  const dispatch = useDispatch();
-
-
   return (
     <>
     <Box sx={containerLStyle}>
