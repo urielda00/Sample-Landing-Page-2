@@ -6,9 +6,9 @@ import phoneBack from '../assets/phoneback2.jpg';
 
 const FirstView= () => {
   return (
-    <>
+    <Box id="upperView">
       <Box sx={containerStyle}>
-        <div id='upperView' style={{zIndex:-200,position:'absolute',top:0}}></div>
+        <div  style={{zIndex:-200,position:'absolute',top:0}}></div>
          <Button href='#aboutPage' variant='contained' sx={{bgcolor:'#EEEEEE',color:'black',borderRadius:'25px',fontSize:'35px',":hover":{color:'black',bgcolor:'#FFA41B'}}}>See More
         <KeyboardDoubleArrowDownIcon fontSize='large' sx={{":hover":{color:'black'}}}/>
         </Button>
@@ -16,7 +16,7 @@ const FirstView= () => {
    
    {/* MobileView: */}
       <Box sx={containerSStyle}>
-        <div id='upperView' style={{zIndex:-200,position:'absolute',top:0}}></div>
+        <div style={{zIndex:-200,position:'absolute',top:0}}></div>
         <p style={{position:'absolute', top:250, color:'white',fontSize:'30px',textAlign:'center'}}>
           Some Descriptive Text Here and more...
         </p>
@@ -24,7 +24,7 @@ const FirstView= () => {
         <KeyboardDoubleArrowDownIcon fontSize='large' sx={{":hover":{color:'black'}}}/>
         </Button>
       </Box>
-    </>
+    </Box>
   )
 };
 

@@ -8,22 +8,27 @@ import Services from './components/3.Services';
 import Contact from './components/4.Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import Observer from './Functions/Observer';
-
+import SectionWrapper from './Functions/Observer';
 
 export default function App() {
   
   return (
     <>
       <Header/>
-     
-      <FirstView/> 
-      <About/>
-      <Services/>
-      <Contact/>
-      <Footer/>
-      <ScrollToTop/>
-      <Observer/>
+      <SectionWrapper id="upperView">
+         <FirstView/> 
+      </SectionWrapper>
+      <SectionWrapper id="aboutPage">
+         <About/>
+      </SectionWrapper>
+      <SectionWrapper id="servicesPage">
+         <Services/>
+      </SectionWrapper>
+      <SectionWrapper id="contactPage">
+         <Contact/>
+         <Footer/>
+         <ScrollToTop/>
+      </SectionWrapper>
     </>
   )
 };

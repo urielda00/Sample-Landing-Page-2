@@ -18,10 +18,10 @@ const Header= () => {
         indicatorColor="secondary"
         aria-label="secondary tabs example"
       >.
-        <Tab sx={tabStyle} href='#upperView' value="zero" label="Top^" />
-        <Tab sx={tabStyle} href='#aboutPage' value="one" label="About Us" />
-        <Tab sx={tabStyle} href='#servicesPage' value="two" label="Services" />
-        <Tab sx={tabStyle} href='#contactPage' value="three" label="Contact Us" />
+        <Tab sx={tabStyle} href='#upperView' value="upperView" label="Top^" />
+        <Tab sx={tabStyle} href='#aboutPage' value="aboutPage" label="About Us" />
+        <Tab sx={tabStyle} href='#servicesPage' value="servicesPage" label="Services" />
+        <Tab sx={tabStyle} href='#contactPage' value="contactPage" label="Contact Us" />
       </Tabs>
     </Box>
     </Box>

@@ -9,13 +9,13 @@ const CardIs = ({image,title,text})=> {
         <CardMedia
           component="img"
           height="140"
-          image={'image'}
+          image={image}
           alt="image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}
-          </Typography>
+          </Typography>ד
           <Typography variant="body2" color="text.secondary">
             {text}
           </Typography>

@@ -23,11 +23,12 @@ const Contact = () => {
             <Box 
             action='https://formsubmit.co/shopme2024@gmail.com'
             method="POST"
+            onSubmit={()=>{alert('information confirmed successfully')}}
             component="form" 
             id='contactForm'     
             sx={{ mt: 1 }}>
-              <input type="hidden" name="_next" value="https://bejewelled-fenglisu-523224.netlify.app/thankYou"></input>
-              <input type="hidden" name="_subject" value="New Contacter From Shopme"></input>
+              <input type="hidden" name="_next" value="https://curious-alpaca-414f68.netlify.app/"></input>
+              <input type="hidden" name="_subject" value="New Contacter Cars"></input>
               <input type="hidden" name="_template" value="table"/>
               <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
