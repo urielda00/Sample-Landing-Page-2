@@ -1,5 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { Button } from '@mui/material';
+
 
 // Components import:
 import FirstView from './components/1.FirstView';
@@ -41,10 +43,10 @@ export default function App() {
          showPopup && (
         <div className="popup-overlay">
           <div className="popup">
-            <p>See the discount only today!</p>
+            <h2>Some <span style={{color:'#F94C10'}}>Discount</span> announcement here...</h2>
             <div>
-             <button onClick={closePopup}>Close</button> 
-             <a href='#contactPage' onClick={closePopup}><button>Contact</button></a>
+             <Button onClick={closePopup}>Close</Button>
+             <a href='#contactPage'><Button onClick={closePopup} variant='contained' sx={{bgcolor:'#F94C10',":hover":{bgcolor:'#C70039'}}}>Contact</Button></a>
             </div>
             
           </div>

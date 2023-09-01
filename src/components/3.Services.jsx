@@ -54,14 +54,14 @@ const Services = () => {
             <CardIs image={card2} title={'Family Days'} text={'Some text go here'}/>
           </Box>
           <Box ref={el => (cardRefs.current[2] = el)} className="card-wrapper">
-            <CardIs image={card3} title={'Couples Days'} text={'Some text go here'}/>
+            <CardIs image={card3} title={'Friends Days'} text={'Some text go here'}/>
           </Box>
         </Box>
       </Box> 
       <Box sx={containerSStyle}>   
          <CardIs image={card1} title={'Fun Days'} text={'Some text go here'}/>           
          <CardIs image={card2} title={'Family Days'} text={'Some text go here'}/>         
-         <CardIs image={card3} title={'Couples Days'} text={'Some text go here'}/>
+         <CardIs image={card3} title={'Friends Days'} text={'Some text go here'}/>
       </Box> 
     </Box>
   )
