@@ -1,20 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  tabValue: 'upperView',
-}
+	tabValue: 'upperView',
+};
 
 export const TabSlice = createSlice({
-  name: 'tab',
-  initialState,
-  reducers: {
-    IsSection: (state,action) => {
-      const isSection = action.payload;
-      state.tabValue = isSection;
-    }
-  }
+	name: 'tab',
+	initialState,
+	reducers: {
+		IsSection: (state, action) => {
+			const isSection = action.payload;
+			state.tabValue = isSection;
+		},
+	},
 });
 
-export const {IsSection} = TabSlice.actions
+export const { IsSection } = TabSlice.actions;
 
-export default TabSlice.reducer
+export default TabSlice.reducer;
